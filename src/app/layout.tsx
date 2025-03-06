@@ -26,13 +26,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <GoogleTagManager gtmId="GTM-MG3DDSDW" />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MG3DDSDW"
-height="0" width="0" style={{display:"none",visibility:"hidden"}}></iframe></noscript>
-        {children}
-      </body>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+  <noscript>
+    <iframe
+      src="https://www.googletagmanager.com/ns.html?id=GTM-MG3DDSDW"
+      height="0"
+      width="0"
+      style={{display:"none", visibility:"hidden"}}
+    ></iframe>
+  </noscript>
+  {children}
+</body>
+
     </html>
   );
 }
